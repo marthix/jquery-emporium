@@ -1,0 +1,43 @@
+$black:          #0a111b;
+$darkblue:       #1b2430;
+$green:          #82e6c2;
+$font-header:          'Monoton', cursive;
+$font-button:          'VT323', monospace;
+
+body {
+  background-color: $black;
+}
+
+nav {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: $font-header;
+  color: $green;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: $font-button;
+  font-size: 18px;
+  width: 100%;
+}
+
+.plugin-window {
+  background-color: $darkblue;
+  height: 380px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+// LAPTOP SCREENS
+@media screen and (min-width: 945px) {
+  .plugin-window {
+    height: 500px;
+  }
+}

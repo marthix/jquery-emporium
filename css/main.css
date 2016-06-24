@@ -1,0 +1,36 @@
+body {
+  background-color: #0a111b;
+}
+
+nav {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: "Monoton", cursive;
+  color: #82e6c2;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  width: 100%;
+}
+
+.plugin-window {
+  background-color: #1b2430;
+  height: 380px;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+@media screen and (min-width: 945px) {
+  .plugin-window {
+    height: 500px;
+  }
+}
