@@ -89,9 +89,16 @@ button {
   }
 }
 
-.scrollorama {
-  overflow: scroll;
+.twenty-twenty {
+  img {
+    width: 100%;
+    margin: auto;
+  }
+}
 
+.twentytwenty-container {
+  width: 550px;
+  margin: 90px auto 0;
 }
 
 .oridomi {
@@ -108,7 +115,7 @@ button {
   img {
     height: 230px;
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto;
   }
 
   button {
@@ -129,6 +136,10 @@ button {
       background: darken($green, 30);
     }
   }
+}
+
+.paper {
+
 }
 
 .plugin-window {

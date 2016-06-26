@@ -9,23 +9,59 @@ for (i = 0; i < navButtons.length; i++){
       var navButtonId = this.getAttribute('id')
 
       if (navButtonId === 'btn-sparkle') {
-        qs('.scrollorama').classList.add('hidden')
+        qs('.twenty-twenty').classList.add('hidden')
         qs('.oridomi').classList.add('hidden')
         qs('.default').classList.add('hidden')
         qs('.sparkle').classList.remove('hidden')
-      } else if (navButtonId === 'btn-scrollorama') {
+      } else if (navButtonId === 'btn-twenty-twenty') {
         qs('.sparkle').classList.add('hidden')
         qs('.oridomi').classList.add('hidden')
         qs('.default').classList.add('hidden')
-        qs('.scrollorama').classList.remove('hidden')
+        qs('.twenty-twenty').classList.remove('hidden')
       } else if (navButtonId === 'btn-oridomi') {
-        qs('.scrollorama').classList.add('hidden')
+        qs('.twenty-twenty').classList.add('hidden')
         qs('.sparkle').classList.add('hidden')
         qs('.default').classList.add('hidden')
         qs('.oridomi').classList.remove('hidden')
       }
     })
 }
+
+//oriDOMi Plugin
+var folded = new OriDomi('.paper', {
+  vPanels:         6,     // number of panels when folding left or right (vertically oriented)
+  speed:           1200,  // folding duration in ms
+  perspective:     500,   // smaller values exaggerate 3D distortion
+  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
+  shading:         'soft' // change the shading type
+});
+
+var foldedButton = qs('.folded-button'),
+    foldArray = ['Accordion', 'Curl', 'Ramp', 'Fold Up', 'Reveal', 'Stairs', 'Twist', 'Fracture']
+
+foldedButton.addEventListener("click", function() {
+  var randomNumber = Math.floor(Math.random() * 8)
+  qs('#oridomi-header').innerText = foldArray[randomNumber]
+
+  if (foldArray[randomNumber] === 'Accordion') {
+    folded.accordion(30)
+  } else if (foldArray[randomNumber] === 'Curl') {
+    folded.curl(30)
+  } else if (foldArray[randomNumber] === 'Ramp') {
+    folded.ramp(30)
+  } else if (foldArray[randomNumber] === 'Fold Up') {
+    folded.foldUp()
+  } else if (foldArray[randomNumber] === 'Reveal') {
+    folded.reveal(30)
+  } else if (foldArray[randomNumber] === 'Stairs') {
+    folded.stairs(30)
+  } else if (foldArray[randomNumber] === 'Twist') {
+    folded.twist(30)
+  } else if (foldArray[randomNumber] === 'Fracture') {
+    folded.fracture(30)
+  }
+})
+
 
 
 //jQuery Plugins
@@ -70,19 +106,9 @@ $(document).ready(function(){
     maxSize: 5,
     direction: "both"
   });
-
-
-
-  //OriDomi Plugin
-  var $folded = $('#paper').oriDomi({
-    vPanels:         5,     // number of panels when folding left or right (vertically oriented)
-    hPanels:         3,     // number of panels when folding top or bottom
-    speed:           1200,  // folding duration in ms
-    ripple:          2,     // backwards ripple effect when animating
-    shadingIntesity: .5,    // lessen the shading effect
-    perspective:     800,   // smaller values exaggerate 3D distortion
-    maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
-    shading:         'soft' // change the shading type
-  });
-
 })
+
+// Twenty-Twenty Plugin
+  $(window).load(function(){
+    $("#box-2020").twentytwenty();
+  });

@@ -81,8 +81,14 @@ button {
   background: #23ad7b;
 }
 
-.scrollorama {
-  overflow: scroll;
+.twenty-twenty img {
+  width: 100%;
+  margin: auto;
+}
+
+.twentytwenty-container {
+  width: 550px;
+  margin: 90px auto 0;
 }
 
 .oridomi {
@@ -100,7 +106,7 @@ button {
 .oridomi img {
   height: 230px;
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto;
 }
 
 .oridomi button {
