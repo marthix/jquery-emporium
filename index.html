@@ -7,38 +7,63 @@
 
     <title>Marthix's Magic Plug-in Emporium</title>
 
-    <link href="https://fonts.googleapis.com/css?family=VT323|Monoton" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/css?family=VT323|Monoton" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
     <div class="container-fluid">
       <div class="row">
-        <h1 class="col-xs-10 col-xs-offset-1 text-center hidden-xs">Marthix's Magic jQuery Emporium</h1>
-        <h1 class="col-xs-10 col-xs-offset-1 text-center visible-xs">MMJE</h1>
+        <h1 class="col-xs-10 col-xs-offset-1 text-center hidden-xs">Marthix's <span>Magic</span> jQuery Emporium</h1>
+        <h1 class="col-xs-10 col-xs-offset-1 text-center visible-xs">M<span>M</span>JE</h1>
       </div>
 
       <nav class="row">
         <div class="col-sm-2 col-sm-offset-3">
-          <button class="">Sparkle</button>
+          <button id="btn-sparkle" class="nav-button">Sparkle</button>
         </div>
         <div class="col-sm-2">
-          <button class="">Scrollorama</button>
+          <button id="btn-scrollorama" class="nav-button">Scrollorama</button>
         </div>
         <div class="col-sm-2">
-          <button class="">OriDomi</button>
+          <button id="btn-oridomi" class="nav-button">OriDomi</button>
         </div>
       </nav>
 
       <main class="row">
-        <div class="col-xs-8 col-xs-offset-2 plugin-window sparkle">
-
+        <div class="col-xs-8 col-xs-offset-2 plugin-window default">
+          <div class="flexbox">
+            <h2>Click any of the buttons above to explore the store.</h2>
+          </div>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 plugin-window sparkle hidden">
+          <div class="flexbox" id=sparkle-box>
+            <h2 id=sparkle-header>Check out the <span id=sparkle-magic>MAGIC</span> of SPARKLE!</h2>
+            <p id=sparkle-text>Hover over any element in the window to see the effect.</p>
+            <button id=sparkle-button>Like rainbows? Hover me.</button>
+          </div>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 plugin-window scrollorama hidden">
+          <h1>SCROLL DOWN</h1>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 plugin-window oridomi hidden">
+          <div class="flexbox">
+            <div class="flex-item">
+              <h2>Accordian</h2>
+              <p>Click and drag the image below</p>
+              <button>New Random Fold</button>
+              <img src="img/drive.jpg" id="paper"/>
+            </div>
+          </div>
         </div>
       </main>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/oridomi.min.js"></script>
+    <script src="js/jquery.scrollorama.js"></script>
     <script src="js/jquery-canvas-sparkles.min.js"></script>
     <script src="js/main.js"></script>
   </body>
