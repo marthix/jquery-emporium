@@ -90,6 +90,8 @@ button {
 }
 
 .twenty-twenty {
+  text-align: center;
+
   img {
     width: 100%;
     margin: auto;
@@ -97,8 +99,8 @@ button {
 }
 
 .twentytwenty-container {
-  width: 550px;
-  margin: 90px auto 0;
+  width: 100%;
+  margin: 20px auto 0;
 }
 
 .oridomi {
@@ -167,6 +169,7 @@ button {
 
 // LAPTOP SCREENS
 @media screen and (min-width: 767px) {
+
   .plugin-window {
     height: 500px;
   }
@@ -194,5 +197,12 @@ button {
     img {
       height: 300px;
     }
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .twentytwenty-container {
+    width: 650px;
+    margin: 60px auto 0;
   }
 }

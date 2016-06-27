@@ -81,14 +81,18 @@ button {
   background: #23ad7b;
 }
 
+.twenty-twenty {
+  text-align: center;
+}
+
 .twenty-twenty img {
   width: 100%;
   margin: auto;
 }
 
 .twentytwenty-container {
-  width: 550px;
-  margin: 90px auto 0;
+  width: 100%;
+  margin: 20px auto 0;
 }
 
 .oridomi {
@@ -169,5 +173,12 @@ button {
   }
   .oridomi img {
     height: 300px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .twentytwenty-container {
+    width: 650px;
+    margin: 60px auto 0;
   }
 }
